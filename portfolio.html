@@ -23,7 +23,7 @@
 	<link rel="manifest" href="fav/manifest.json">
 	<title>Andreas</title>
 
-<script>location.reload(true);</script>
+
 
 <!-- add fancybox.css -->
 
@@ -367,5 +367,10 @@
 });
 
 </script>
-
+<script>window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}</script>
 </html>
