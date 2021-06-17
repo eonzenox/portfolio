@@ -365,24 +365,23 @@
 });
  */
  jQuery(document).ready(function(){
+    // now doc is ready, make selection
+    // use another selector, not .isotope,
+    // since that is dynamically added in Isotope v1
+    var $container = jQuery('#container');
+    // use imagesLoaded, instead of window.load
+    $container( function() {
+        $container.isotope({
+            itemSelector: '.item',
+            // masonry is default layoutMode, no need to specify it
+            sortBy: 'random'
+        });
+    })
+});
+
 
 // Initialize Isotope
 
-$('.grid').isotope({
-   itemSelector: '.item',
-   percentPosition: true,
-});
-
-// Refresh the layout of the grid each time an image gets loaded
-
-$('.grid').imagesLoadedMB().progress( function() {
-   $('.grid').isotope('layout');
-});
-
-});
-  window.addEventListener("load", function(){
-	alert("Hello! I am an alert boeeeeex!!");
-});
 
 </script>
 <!-- <script>window.onload = function() {
