@@ -29,7 +29,7 @@ $(document).ready(function() {
         return false;
     });
 // begin add	
-	// var $container = $('#container');
+	 var $container = $('#container');
 	// // init
 	// $container.isotope({
 	// 	// options
