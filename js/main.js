@@ -29,18 +29,27 @@ $(document).ready(function() {
         return false;
     });
 // begin add	
-	var $container = $('#container');
-	// init
-	$container.isotope({
-		// options
-		itemSelector: '.item',
-		layoutMode: 'cellsByRow',
-		cellsByRow: {
-			columnWidth: 295,
-			rowHeight: 295
-		}
-		});
-		
+	// var $container = $('#container');
+	// // init
+	// $container.isotope({
+	// 	// options
+	// 	itemSelector: '.item',
+	// 	layoutMode: 'cellsByRow',
+	// 	cellsByRow: {
+	// 		columnWidth: 295,
+	// 		rowHeight: 295
+	// 	}
+	// 	});
+		$(window).load(function(){
+      $('#container').isotope({
+        itemSelector: '.item',
+        layoutMode: 'cellsByRow',
+        cellsByRow: {
+          columnWidth: 295,
+          rowHeight: 295
+        }
+      });
+    });
 	$('#filters').on( 'click', 'li', function() {
 		var filterValue = $(this).attr('data-filter');
 		$container.isotope({ filter: filterValue });
