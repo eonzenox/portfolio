@@ -364,6 +364,20 @@
 	});
 });
  */
+ jQuery( function() {
+    // now doc is ready, make selection
+    // use another selector, not .isotope,
+    // since that is dynamically added in Isotope v1
+    var $container = jQuery('#container');
+    // use imagesLoaded, instead of window.load
+    $container.imagesLoaded( function() {
+        $container.isotope({
+            itemSelector: '.grid-item',
+            // masonry is default layoutMode, no need to specify it
+            sortBy: 'random'
+        });
+    })
+});
   window.addEventListener("load", function(){
 	alert("Hello! I am an alert boeeeeex!!");
 });
