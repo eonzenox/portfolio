@@ -365,18 +365,20 @@
 });
  */
  jQuery(document).ready(function(){
-    // now doc is ready, make selection
-    // use another selector, not .isotope,
-    // since that is dynamically added in Isotope v1
-    var $container = jQuery('#container');
-    // use imagesLoaded, instead of window.load
-  
-        $container.isotope({
-            itemSelector: '.item',
-            // masonry is default layoutMode, no need to specify it
-          
-    
-    })
+
+// Initialize Isotope
+
+$('.grid').isotope({
+   itemSelector: '.item',
+   percentPosition: true,
+});
+
+// Refresh the layout of the grid each time an image gets loaded
+
+$('.container').imagesLoadedMB().progress( function() {
+   $('.container').isotope('layout');
+});
+
 });
 
 
