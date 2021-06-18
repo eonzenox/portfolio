@@ -707,7 +707,7 @@ transition: all 0.5s ease-in-out;
 		background-image: url(../images/icon_pn@x2.png);
 		background-size:38px 38px;
 	}
-	.plagin_list li.li_1 a{
+	/* .plagin_list li.li_1 a{
 		background-image: url(..images/icon_npm@x2.png);
 		background-size:49px 42px;
 	}
@@ -774,7 +774,7 @@ transition: all 0.5s ease-in-out;
 	.plagin_list li.li_17 a{
 		background-image: url(../images/icon_js2@x2.png);
 		background-size:60px 24px;
-	}
+	} */
 	.box_contact span.email{
 		background-image: url(../images/icon_email2@x2.png);
 		background-size:54px 41px;
